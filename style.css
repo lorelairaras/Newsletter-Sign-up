@@ -1,0 +1,268 @@
+:root {
+  --red: hsl(4, 100%, 67%);
+  --blue800: hsl(234, 29%, 20%);
+  --blue700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+  --error-bg: rgba(255, 98, 87, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--blue700);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--blue800);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 0;
+  max-width: 930px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 1.5rem;
+}
+
+.illustration-mobile img {
+  width: 100%;
+  display: block;
+}
+
+.illustration-desktop {
+  display: none;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--blue800);
+}
+
+.text-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: var(--blue800);
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.5;
+  color: var(--blue800);
+}
+
+.features li img {
+  width: 21px;
+  height: 21px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.label-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue800);
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: none;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+input {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  font-size: 1rem;
+  color: var(--blue800);
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--blue800);
+}
+
+.form-group.error input {
+  border-color: var(--red);
+  background-color: var(--error-bg);
+  color: var(--red);
+}
+
+.btn-subscribe {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--blue800);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-subscribe:hover {
+  background: linear-gradient(90deg, var(--red) 0%, #ff693e 100%);
+  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+}
+
+.success-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.success-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.success-card h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  color: var(--blue800);
+}
+
+.success-card p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: var(--blue800);
+}
+
+.btn-dismiss {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--blue800);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-dismiss:hover {
+  background: linear-gradient(90deg, var(--red) 0%, #ff693e 100%);
+  box-shadow: 0 10px 20px rgba(255, 98, 87, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: var(--red);
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .illustration-mobile {
+    display: none;
+  }
+
+  .illustration-desktop {
+    display: block;
+  }
+
+  .illustration-desktop img {
+    height: 100%;
+    width: auto;
+  }
+
+  .card-content {
+    padding: 4rem 2rem 4rem 3rem;
+    justify-content: center;
+    max-width: 480px;
+  }
+
+  .text-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .success-card {
+    padding: 3rem;
+    max-width: 500px;
+  }
+
+  .success-card h1 {
+    font-size: 3.5rem;
+  }
+}
