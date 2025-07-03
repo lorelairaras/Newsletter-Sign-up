@@ -229,7 +229,7 @@ input:focus {
   }
 
   .card {
-    flex-direction: row-reverse;
+    flex-direction: row;
     padding: 1.5rem;
     gap: 2rem;
   }
