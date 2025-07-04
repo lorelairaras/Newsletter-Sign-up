@@ -1,3 +1,5 @@
+// I want to study more regarding this challenge; I will continue to learn
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("subscription-form");
   const emailInput = document.getElementById("email");
